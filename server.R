@@ -5,6 +5,7 @@ shinyServer(function(input, output, session) {
   language <- reactiveValues(current = "english")
   learn_tab <- reactiveValues(current_step = 1, number_of_steps = 1)
   common_examples_tab <- reactiveValues(current_step = 1, number_of_steps = 3)
+  eval(parse(text = includeText("./www/functions.R")))
   Master::ServerInit(
     mjxMenuHTMLCSS = TRUE,
     Development = TRUE,
@@ -28,4 +29,5 @@ shinyServer(function(input, output, session) {
   observe({
     eval(parse(text = includeText(paste0("./www/Content/common-examples/step", toString(common_examples_tab$current_step), "-server.R"))))
   })
+
 })

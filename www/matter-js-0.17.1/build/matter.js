@@ -6491,7 +6491,6 @@ var Mouse = __webpack_require__(12);
 
                     c.translate(part.position.x, part.position.y);
                     c.rotate(part.angle);
-
                     c.drawImage(
                         texture,
                         texture.width * -sprite.xOffset * sprite.xScale,

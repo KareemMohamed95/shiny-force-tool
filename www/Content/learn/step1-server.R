@@ -1,8 +1,8 @@
 
-observeEvent(input$mass_input, {
-  if(is.null(input$mass_input) || is.na(input$mass_input) || input$mass_input <= 0 || input $mass_input > 30)return()
-  mass_input = input$mass_input
-  runjs(paste0("changeBodyMass(",mass_input,")"))
+observeEvent(input$body_type_input, {
+  if(is.null(input$body_type_input) || is.na(input$body_type_input))return()
+  runjs(paste0("changeBody(\"",input$body_type_input,"\")"))
+  rerender_body_info(input$body_type_input)
 })
 
 observeEvent(input$hfright_button, {
@@ -27,5 +27,15 @@ observeEvent(input$position_input, {
 
 observeEvent(input$surface_type_input, {
   if(is.null(input$surface_type_input) || is.na(input$surface_type_input))return();
-  runjs("changeBaseBackground()")
+  runjs(paste0("changeBaseBackground(\"",input$surface_type_input,"\")"))
+})
+
+output$body_info_output <- renderUI({
+ tagList(
+     span(class = "red-span fs-15",
+          "Mass = 5kg"),
+     tags$br(),
+     span(class = "red-span fs-15",
+          "Friction coefficient = 0.004")
+   )
 })
