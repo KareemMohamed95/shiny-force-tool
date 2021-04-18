@@ -1,0 +1,35 @@
+.wd-100 {
+      width: 100%;
+    }
+.hg-100 {
+  height: 100vh;
+}
+.mrl-15 {
+	margin: 0 15px;
+}
+.numeric-input-div {
+  width: 100px;
+  margin: -10px 10px 0 10px;
+}
+.irs-line{
+	background: #90baec !important;
+    border-color: #90baec !important;
+    height: 10px !important;
+}
+.irs--shiny .irs-handle{
+	background-color: orange !important;
+}
+.irs--shiny .irs-single{
+	background-color: #27296D !important;
+}
+.control-label {
+	color: black !important;
+	text-transform: none;
+}
+.form-control { 
+	border: 1px solid orange; 
+	color: black;
+}
+.selectize-input {
+	border: 1px solid orange !important;
+}

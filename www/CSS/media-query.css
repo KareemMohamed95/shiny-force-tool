@@ -1,0 +1,9 @@
+@media screen and (min-width: 750px) and (max-width:1199px) {
+	/* ipad and similar*/
+}
+@media screen and (min-width: 1200px) and (max-width:1799px) {
+	/* ipad pro and similar */
+}
+@media screen and (min-width: 1800px){
+	/* large screens */
+}
